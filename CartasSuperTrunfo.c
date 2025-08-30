@@ -1,18 +1,13 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() 
 {
-    char estado01[1], codigodacarta01[50], cidade01[50];
+    char estado01[3], codigodacarta01[50], cidade01[50];
     int pturistico01, populacao01;
     float area01, pib01;  //VARIAVEIS DEFINIDAS PARA APRIMEIRA CARTA! (CARTA 1).
 
-    char estado02[1], codigodacarta02[50], cidade02[50];
+    char estado02[3], codigodacarta02[50], cidade02[50];
     int pturistico02, populacao02;
     float area02, pib02;  //VARIAVEIS DEFINIDAS PARA A SEGUNDA CARTA! (CARTA 2).
 
@@ -24,16 +19,16 @@ int main()
 
     printf("Adiçione as seguintes Informações abaixo;\n\n");
     
-    printf("CARTA 1");
+    printf("CARTA 1\n");
     printf("*******");
     
-    
+    //ABAIXO A PRIMEIRA REQUIÇÃO DOS DADOS PARA O USUARIO
 
     printf("\n\nInicial do Estado: ");
     scanf("%c", estado01);
 
     printf("\nCodigo da carta: ");
-    scanf("%c %s", estado01, codigodacarta01);
+    scanf("%s", codigodacarta01);
 
     printf("\nNome da Cidade: ");
     scanf("%s", cidade01);
@@ -50,17 +45,18 @@ int main()
     printf("\nQuantidade de pontos turisticos: ");
     scanf("%d", &pturistico01);
 
-    
+    //FINAL DA PRIMEIRA REQUISIÇAÕ
     printf("\n\n*********************************************************************************\n\n");
     printf("Agora digite a segunda carta!\n\n");
 
+    //INICIO DA SEGUNDA REQUISIÇÃO
      printf("CARTA 2\n");
-     printf("*******");
+     printf("*******\n\n");
     
     
 
-    printf("\n\nInicial do Estado: ");
-    scanf("%s", estado02);
+    printf("Inicial do Estado: ");
+    scanf("%c", estado02);
 
     printf("\nCodigo da carta: ");
     scanf("%s", codigodacarta02);
@@ -79,9 +75,11 @@ int main()
 
     printf("\nQuantidade de pontos turisticos: ");
     scanf("%d", &pturistico02);
-
+    //FINAL DA ENTRADA DE DADOS
     printf("\n\nInformações Inseridas com sucesso\n\n!");
 
+
+    //IMPRESSÃO DE DADOS INSERIDOS NA TELA
     printf("***************");
     printf("DADOS INSERIDOS");
     printf("***************\n\n");
@@ -90,17 +88,30 @@ int main()
     printf("*******");
 
     printf("\n\nInicial do estado: %s",estado01);
-    printf("\nCodigo: %c %s", estado01, codigodacarta01);
-    printf("\nNome da Cidade: %s", &cidade01);
-    printf("\nNumero de Habitantes: %d", &populacao01);
-    printf("\nÁrea: %f Km²", &area01);
-    printf("\nPIB: %f Milhões(Produto iNTERNO Bruto.)", &pib01);
-    printf("\nPontos Turisticos na Cidade: %d", &pturistico01);
-    printf("\t");
+    printf("\nCodigo: %s", codigodacarta01);
+    printf("\nNome da Cidade: %s", cidade01);
+    printf("\nNumero de Habitantes: %d", populacao01);
+    printf("\nÁrea: %f Km²", area01);
+    printf("\nPIB: %f Milhões(Produto INTERNO Bruto.)", pib01);
+    printf("\nPontos Turisticos na Cidade: %d", pturistico01);
+    printf("\n\n=============================================================\n\n");
 
 
+    printf("CARTA 2\n");
+    printf("*******\n");
+
+    printf("\n\nInicial do estado: %s",estado02);
+    printf("\nCodigo:  %s", codigodacarta02);
+    printf("\nNome da Cidade: %s", cidade02);
+    printf("\nNumero de Habitantes: %d", populacao02);
+    printf("\nÁrea: %f Km²", area02);
+    printf("\nPIB: %f Milhões(Produto INTERNO Bruto.)", pib02);
+    printf("\nPontos Turisticos na Cidade: %d\n\n", pturistico02);
 
 
 
     return 0;
 }
+
+
+
