@@ -3,29 +3,28 @@
 
 int main() 
 {
-    char estado01[3], codigodacarta01[50], cidade01[50];
+    char estado01[2], codigodacarta01[50], cidade01[50];
     int pturistico01, populacao01;
     float area01, pib01;  //VARIAVEIS DEFINIDAS PARA APRIMEIRA CARTA! (CARTA 1).
+    float dempo01;  // TIPO DE CONVERSÃO IMPLICITA PARA FLOAT
+    float ppc01;
 
-    char estado02[3], codigodacarta02[50], cidade02[50];
-    int pturistico02, populacao02;
-    float area02, pib02;  //VARIAVEIS DEFINIDAS PARA A SEGUNDA CARTA! (CARTA 2).
 
-    printf("------------------------------------\n");
+    
     printf("************");
     printf("SUPER TRUNFO");
-    printf("************\n");
-    printf("------------------------------------\n\n");
+    printf("************\n\n");
+   
 
-    printf("Adiçione as seguintes Informações abaixo;\n\n");
+    printf("***********************ADIÇIONE AS SEGUINTES INFORMAÇÕES ABAIXO***********************\n\n");
     
     printf("CARTA 1\n");
-    printf("*******");
+    printf("*******\n");
     
     //ABAIXO A PRIMEIRA REQUIÇÃO DOS DADOS PARA O USUARIO
 
-    printf("\nInicial do Estado: ");
-    scanf("%c", estado01);
+    printf("Inicial do Estado: ");
+    scanf("%s", estado01);
 
     printf("\nCodigo da carta: ");
     scanf("%s", codigodacarta01);
@@ -33,7 +32,7 @@ int main()
     printf("\nNome da Cidade: ");
     scanf("%s", cidade01);
 
-    printf("\nNumero da população: ");
+    printf("\nNumero da população (sem pontos e virgulas): ");
     scanf("%d", &populacao01);
 
     printf("\nArea Km²: ");
@@ -44,21 +43,30 @@ int main()
 
     printf("\nQuantidade de pontos turisticos: ");
     scanf("%d", &pturistico01);
+    
+
+    dempo01 = populacao01 / area01;
+    ppc01 = pib01 / populacao01;
 
     //FINAL DA PRIMEIRA REQUISIÇÃO
 
     printf("\n\n==================================\n\n" );
-    printf("\nMAgora digite a segunda carta!\n\n");
+    printf("\nAGORA DIGITE A SEGUNDA CARTA!\n");
 
     //INICIO DA SEGUNDA REQUISIÇÃO
 
-     printf("CARTA 2\n");
-     printf("*******\n\n");
-    
+    char estado02[2], codigodacarta02[50], cidade02[50];
+    int pturistico02, populacao02;
+    float area02, pib02;  //VARIAVEIS DEFINIDAS PARA A SEGUNDA CARTA! (CARTA 2).
+   
+
+    printf("CARTA 2\n");
+    printf("*******\n");
     
 
-    printf("Inicial do Estado: ");
-    scanf("%c", estado02);
+    printf("Incial do estado: ");
+    scanf("%s", estado02);
+    
 
     printf("\nCodigo da carta: ");
     scanf("%s", codigodacarta02);
@@ -66,7 +74,7 @@ int main()
     printf("\nNome da Cidade: ");
     scanf("%s", cidade02);
 
-    printf("\nNumero da população: ");
+    printf("\nNumero da população sem pontos e virgulas: ");
     scanf("%d", &populacao02);
 
     printf("\nArea Km²: ");
@@ -80,35 +88,42 @@ int main()
     //FINAL DA ENTRADA DE DADOS
     printf("\n\nInformações Inseridas com sucesso\n\n!");
 
+    float dempo02 = (float) populacao02 / area02;  // TIPO DE CONVERSÃO EXPLICITA PARA FLOAT
+    float ppc02 = (float) pib02 / populacao02;
 
     //IMPRESSÃO DE DADOS INSERIDOS NA TELA
-    printf("***************");
+    printf("***************\n");
     printf("DADOS INSERIDOS");
     printf("***************\n\n");
 
     printf("CARTA 1\n");
-    printf("*******");
+    printf("*******\n\n");
 
-    printf("\n\nInicial do estado: %s",estado01);
-    printf("\nCodigo: %s", codigodacarta01);
+    printf("Inicial do estado: %s", estado01);
+    printf("\nCodigo: %s%s", estado01, codigodacarta01);
     printf("\nNome da Cidade: %s", cidade01);
     printf("\nNumero de Habitantes: %d", populacao01);
     printf("\nÁrea: %f Km²", area01);
-    printf("\nPIB: %f Milhões(Produto INTERNO Bruto.)", pib01);
-    printf("\nPontos Turisticos na Cidade: %d", pturistico01);
+    printf("\nPIB: %f Milhões de reais.", pib01);
+    printf("\nExistem  %d Pontos Turisticos na Cidade.", pturistico01);
+    printf("\nDensidade Populacional: %.2f", dempo01);
+    printf("\nPib per Capita: %f", ppc01);
+
     printf("\n\n=============================================================\n\n");
 
 
     printf("CARTA 2\n");
     printf("*******\n");
 
-    printf("\n\nInicial do estado: %s",estado02);
-    printf("\nCodigo:  %s", codigodacarta02);
+    printf("\nInicial do estado: %s", estado02);
+    printf("\nCodigo:  %s%s", estado02, codigodacarta02);
     printf("\nNome da Cidade: %s", cidade02);
     printf("\nNumero de Habitantes: %d", populacao02);
     printf("\nÁrea: %f Km²", area02);
-    printf("\nPIB: %f Milhões(Produto INTERNO Bruto.)", pib02);
-    printf("\nExistem  %d Pontos Turisticos na Cidade\n\n", pturistico02);
+    printf("\nPIB: %f Milhões de Reais.", pib02);
+    printf("\nExistem  %d Pontos Turisticos na Cidade", pturistico02);
+    printf("\nDensidade Populacional: %.2f", dempo02);
+    printf("\nPib per Capita: %f\n\n", ppc02);
 
 
 
