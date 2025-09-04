@@ -24,7 +24,7 @@ int main()
     
     //ABAIXO A PRIMEIRA REQUIÇÃO DOS DADOS PARA O USUARIO
 
-    printf("\n\nInicial do Estado: ");
+    printf("\nInicial do Estado: ");
     scanf("%c", estado01);
 
     printf("\nCodigo da carta: ");
@@ -45,11 +45,13 @@ int main()
     printf("\nQuantidade de pontos turisticos: ");
     scanf("%d", &pturistico01);
 
-    //FINAL DA PRIMEIRA REQUISIÇAÕ
-    printf("\n\n*********************************************************************************\n\n");
-    printf("Agora digite a segunda carta!\n\n");
+    //FINAL DA PRIMEIRA REQUISIÇÃO
+
+    printf("\n\n==================================\n\n" );
+    printf("\nMAgora digite a segunda carta!\n\n");
 
     //INICIO DA SEGUNDA REQUISIÇÃO
+
      printf("CARTA 2\n");
      printf("*******\n\n");
     
@@ -106,7 +108,7 @@ int main()
     printf("\nNumero de Habitantes: %d", populacao02);
     printf("\nÁrea: %f Km²", area02);
     printf("\nPIB: %f Milhões(Produto INTERNO Bruto.)", pib02);
-    printf("\nPontos Turisticos na Cidade: %d\n\n", pturistico02);
+    printf("\nExistem  %d Pontos Turisticos na Cidade\n\n", pturistico02);
 
 
 
