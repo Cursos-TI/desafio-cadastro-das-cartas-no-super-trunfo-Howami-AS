@@ -11,9 +11,9 @@ int main()
 
 
     
-    printf("************");
-    printf("SUPER TRUNFO");
-    printf("************\n\n");
+    printf("************************");
+    printf("\nSUPER TRUNFO");
+    printf("\n************************\n\n");
    
 
     printf("***********************ADIÇIONE AS SEGUINTES INFORMAÇÕES ABAIXO***********************\n\n");
@@ -57,7 +57,7 @@ int main()
 
     char estado02[2], codigodacarta02[50], cidade02[50];
     int pturistico02, populacao02;
-    float area02, pib02;  //VARIAVEIS DEFINIDAS PARA A SEGUNDA CARTA! (CARTA 2).
+    float area02, pib02, dempo02;  //VARIAVEIS DEFINIDAS PARA A SEGUNDA CARTA! (CARTA 2).
    
 
     printf("CARTA 2\n");
@@ -86,9 +86,10 @@ int main()
     printf("\nQuantidade de pontos turisticos: ");
     scanf("%d", &pturistico02);
     //FINAL DA ENTRADA DE DADOS
-    printf("\n\nInformações Inseridas com sucesso\n\n!");
+    printf("\n\nInformações Inseridas com sucesso\n\n");
+    printf("========================================================================");
 
-    float dempo02 = (float) populacao02 / area02;  // TIPO DE CONVERSÃO EXPLICITA PARA FLOAT
+    dempo02 = populacao02 / area02;  // TIPO DE CONVERSÃO EXPLICITA PARA FLOAT
     float ppc02 = (float) pib02 / populacao02;
 
     //IMPRESSÃO DE DADOS INSERIDOS NA TELA
@@ -127,7 +128,147 @@ int main()
 
 
 
-    return 0;
+    //INICIO DA COMPARAÇAO DE CARTAS.
+   
+    printf("******************COMPARAÇÃO DE ATRIBUTOS******************\n\n");
+
+    printf("Digite o numero do atributo nas cartas a serem comparados!\n");
+    printf("1-habitantes 2-area 3-Pib 4-Pturisticos 5-densidadep:");
+
+    int numatributo;
+    scanf("%d", &numatributo);
+
+    switch (numatributo)
+    {
+    case 1:
+        printf("Atributo a ser verificado; POPULAÇÃO! \n\n");
+        printf("Verificando...\n\n");
+
+
+        if (populacao01 == populacao02)
+        {
+            printf("EMPATADO!");
+            
+        }
+        else if (populacao01 > populacao02){
+            printf("\nCarta1 GANHOU!");
+            
+        }
+        else{
+            printf("\nCarta2 GANHOU!\n");
+            
+        }
+        
+        printf("\nComparação entre as Cidades: %s x %s ", cidade01, cidade02);
+        printf("\nAtributo usado na comparação: POPULAÇÂO");
+        printf("\nValores dos atributos: %d x %d\n\n", populacao01, populacao02);
+
+        break;
+
+    case 2:
+    printf("Atributo a ser verificado; AREA! \n\n");
+    printf("Verificando...\n\n");
+
+
+        if (area01 == area02)
+        {
+            printf("EMPATADO!");
+            
+        }
+        else if (area01 > area02){
+            printf("\nCarta1 GANHOU!");
+            
+        }
+        else{
+            printf("\nCarta2 GANHOU!\n");
+            
+        }
+        
+        printf("\nComparação entre as Cidades: %s x %s ", cidade01, cidade02);
+        printf("\nAtributo usado na comparação: AREA");
+        printf("\nValores dos atributos: %f x %f\n\n", area01, area02);
+    break;
+
+     case 3:
+    printf("Atributo a ser verificado; PIB! \n\n");
+    printf("Verificando...\n\n");
+
+
+        if (pib01 == pib02)
+        {
+            printf("EMPATADO!");
+            
+        }
+        else if (pib01 > pib02){
+            printf("\nCarta1 GANHOU!");
+            
+        }
+        else{
+            printf("\nCarta2 GANHOU!\n");
+            
+        }
+        
+        printf("\nComparação entre as Cidades: %s x %s ", cidade01, cidade02);
+        printf("\nAtributo usado na comparação: PIB");
+        printf("\nValores dos atributos: %f x %f\n\n", pib01, pib02);
+    break; 
+
+    case 4:
+    printf("Atributo a ser verificado; PTURISTICO! \n\n");
+    printf("Verificando...\n\n");
+
+
+        if (pturistico01 == pturistico02)
+        {
+            printf("EMPATADO!");
+            
+        }
+        else if (pturistico01 > pturistico02){
+            printf("\nCarta1 GANHOU!");
+            
+        }
+        else{
+            printf("\nCarta2 GANHOU!\n");
+            
+        }
+        
+        printf("\nComparação entre as Cidades: %s x %s ", cidade01, cidade02);
+        printf("\nAtributo usado na comparação: P-TURISTICOS");
+        printf("\nValores dos atributos: %d x %d\n\n", pturistico01, pturistico02);
+    break; 
+
+    case 5:
+    printf("Atributo a ser verificado; DENSIDADEPOPULAÇIONAL! \n\n");
+    printf("Verificando...\n\n");
+
+
+        if (dempo01 == dempo02)
+        {
+            printf("EMPATADO!");
+            
+        }
+        else if (dempo01 < dempo02){
+            printf("\nCarta1 GANHOU!");
+            
+        }
+        else{
+            printf("\nCarta2 GANHOU!\n");
+            
+        }
+        
+        printf("\nComparação entre as Cidades: %s x %s ", cidade01, cidade02);
+        printf("\nAtributo usado na comparação: DENSIDADE POPULACIONAL");
+        printf("\nValores dos atributos: %f x %f\n\n", dempo01, dempo02);
+
+        printf("******************FIM DA COMPARAÇÃO******************\n\n");
+    break;
+
+
+    default:
+        break;
+    }
+
+   
 }
 
 
