@@ -9,7 +9,6 @@ int main()
     float dempo01;  // TIPO DE CONVERSÃO IMPLICITA PARA FLOAT
     float ppc01;
 
-
     
     printf("************************");
     printf("\nSUPER TRUNFO");
